@@ -4,7 +4,37 @@
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="refresh" content="0; url=obsidian://open?vault=main&file=todo" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Redirecting to Obsidian...</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: #1e1e1e;
+            color: white;
+        }
+
+        .redirect-button {
+            padding: 20px 40px;
+            font-size: 24px;
+            background-color: #5a7cff;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(90, 124, 255, 0.6);
+            transition: background-color 0.3s ease;
+        }
+
+        .redirect-button:hover {
+            background-color: #405bff;
+        }
+    </style>
     <script>
         setTimeout(() => {
             window.location.href = "obsidian://open?vault=main&file=todo";
@@ -13,8 +43,9 @@
 </head>
 
 <body>
-    <p>If you are not redirected automatically, <a href="obsidian://open?vault=main&file=todo">click here</a> to open
-        Obsidian.</p>
+    <button class="redirect-button" onclick="window.location.href='obsidian://open?vault=main&file=todo'">
+        Open Obsidian
+    </button>
 </body>
 
 </html>
